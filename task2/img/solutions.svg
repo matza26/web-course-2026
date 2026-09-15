@@ -1,0 +1,42 @@
+<svg viewBox="0 0 560 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="solTitle">
+  <title id="solTitle">Специалист сидит в кресле и работает с планшетом</title>
+  <defs>
+    <linearGradient id="solBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff2e6"/>
+      <stop offset="100%" stop-color="#ffdcb8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="560" height="520" rx="28" fill="url(#solBg)"/>
+
+  <circle cx="450" cy="110" r="70" fill="#ffffff" opacity="0.4"/>
+  <circle cx="90" cy="440" r="60" fill="#c94c1f" opacity="0.12"/>
+
+  <path d="M120 470 L440 470 L420 430 L140 430Z" fill="#c94c1f" opacity="0.15"/>
+
+  <g>
+    <path d="M150 460 L150 300 Q150 250 220 250 L360 250 Q420 250 420 310 L420 460Z" fill="#f2622e"/>
+    <rect x="170" y="270" width="220" height="24" rx="12" fill="#c94c1f"/>
+    <rect x="130" y="330" width="40" height="120" rx="18" fill="#c94c1f"/>
+    <rect x="400" y="330" width="40" height="120" rx="18" fill="#c94c1f"/>
+  </g>
+
+  <g>
+    <circle cx="285" cy="185" r="44" fill="#ffd8b8"/>
+    <path d="M245 168 Q285 128 325 168 L325 156 Q285 120 245 156Z" fill="#2d2a26"/>
+    <rect x="255" y="225" width="60" height="70" rx="16" fill="#2d2a26"/>
+    <rect x="245" y="270" width="30" height="90" rx="12" fill="#ffd8b8"/>
+    <rect x="295" y="270" width="30" height="90" rx="12" fill="#ffd8b8"/>
+  </g>
+
+  <g>
+    <rect x="230" y="330" width="110" height="80" rx="12" fill="#ffffff"/>
+    <rect x="245" y="345" width="80" height="8" rx="4" fill="#f2622e"/>
+    <rect x="245" y="362" width="60" height="8" rx="4" fill="#ffcaa1"/>
+    <rect x="245" y="379" width="70" height="8" rx="4" fill="#ffcaa1"/>
+  </g>
+
+  <circle cx="470" cy="420" r="6" fill="#c94c1f"/>
+  <circle cx="80" cy="120" r="6" fill="#c94c1f"/>
+  <circle cx="110" cy="150" r="4" fill="#c94c1f"/>
+</svg>

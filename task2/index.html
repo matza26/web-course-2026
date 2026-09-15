@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BrandBuzz — маркетинговое агентство</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <span class="logo-mark" aria-hidden="true"></span>
+    <span class="logo-text">BrandBuzz</span>
+  </div>
+
+  <nav class="main-nav" aria-label="Основная навигация">
+    <ul class="nav-list">
+      <li><a href="#hero" class="nav-link active">Главная</a></li>
+      <li><a href="#agency" class="nav-link">О нас</a></li>
+      <li><a href="#services" class="nav-link">Услуги</a></li>
+      <li><a href="#contact" class="nav-link">Контакты</a></li>
+      <li><a href="#reviews" class="nav-link">Блог</a></li>
+    </ul>
+  </nav>
+
+  <a href="#contact" class="btn btn-primary header-cta">Начать</a>
+
+  <button class="burger" type="button" aria-label="Открыть меню">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<main>
+
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <h1>Мы создаём <span class="accent">решения</span> для вашего бизнеса</h1>
+      <p>Наша команда следит за новыми тенденциями и технологиями в маркетинге, чтобы ваши кампании оставались на острие индустрии.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Начать</a>
+        <a href="#services" class="btn btn-link">Узнать больше</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="img/hero.svg" alt="Иллюстрация двух специалистов за работой" loading="lazy" width="640" height="480">
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="section-heading">
+      <h2>Мы предоставляем лучшие <span class="accent">услуги</span></h2>
+      <p>Подбираем инструменты под задачи вашего бренда, не подгоняя стратегию под шаблон.</p>
+    </div>
+
+    <div class="service-grid">
+      <article class="service-card">
+        <span class="service-icon icon-yellow" aria-hidden="true">SEO</span>
+        <h3>SEO/SEM</h3>
+        <p>Поднимаем сайт в выдаче и настраиваем платный трафик так, чтобы каждый клик окупался.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-icon icon-green" aria-hidden="true">MKT</span>
+        <h3>Маркетинг</h3>
+        <p>Строим маркетинговую стратегию от исследования аудитории до запуска кампаний.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-icon icon-blue" aria-hidden="true">VC</span>
+        <h3>Вирусные кампании</h3>
+        <p>Создаём контент, который расходится по соцсетям без лишних вложений в рекламу.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-icon icon-red" aria-hidden="true">+</span>
+        <h3>Другое</h3>
+        <p>Аналитика, брендинг, дизайн — закрываем смежные задачи одной командой.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="solutions">
+    <div class="solutions-media">
+      <img src="img/solutions.svg" alt="Иллюстрация специалиста с планшетом" loading="lazy" width="560" height="520">
+    </div>
+    <div class="solutions-text">
+      <h2>Простые <span class="accent">решения!</span></h2>
+      <p>Мы понимаем, что каждый бизнес уникален. Поэтому уделяем время разбору именно вашей задачи, прежде чем предлагать план.</p>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step-number">1</span>
+          <div class="step-body">
+            <h3>Свяжитесь с нами</h3>
+            <p>Оставьте заявку — обсудим цели и сроки проекта.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-number">2</span>
+          <div class="step-body">
+            <h3>Консультация</h3>
+            <p>Подберём подходящий пакет услуг под ваш бюджет.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-number">3</span>
+          <div class="step-body">
+            <h3>Оформление заказа</h3>
+            <p>Фиксируем детали проекта и утверждаем план работ.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-number">4</span>
+          <div class="step-body">
+            <h3>Оплата</h3>
+            <p>Удобный способ оплаты — и мы приступаем к работе.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="solutions-actions">
+        <a href="#contact" class="btn btn-primary">Начать</a>
+        <a href="#reviews" class="btn btn-outline">Подробнее</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="agency" id="agency">
+    <div class="agency-text">
+      <h2>Наше <span class="accent">агентство</span></h2>
+      <p>Мы верим в силу данных. Аналитический подход помогает оптимизировать маркетинговые усилия для максимальной окупаемости инвестиций.</p>
+      <p>Опираемся на конкретные метрики, а не догадки, — и превращаем инсайты в решения для вашего бизнеса.</p>
+      <a href="#services" class="btn btn-outline">Подробнее</a>
+    </div>
+    <div class="agency-media">
+      <img src="img/agency.svg" alt="Иллюстрация аналитической панели" loading="lazy" width="560" height="420">
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="section-heading">
+      <h2>Что говорят <span class="accent">клиенты!</span></h2>
+      <p>Истории компаний, которые доверили нам свой маркетинг.</p>
+    </div>
+
+    <div class="review-track">
+      <article class="review-card">
+        <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Команда разобралась в нашей нише за пару встреч и предложила стратегию, которая реально сработала.</p>
+        <div class="review-author">
+          <span class="avatar" aria-hidden="true"></span>
+          <div>
+            <strong>Илья Кравцов</strong>
+            <span>Основатель, Loop Store</span>
+          </div>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
+        <p>Прозрачная отчётность и понятные метрики — впервые видим, за что именно платим.</p>
+        <div class="review-author">
+          <span class="avatar" aria-hidden="true"></span>
+          <div>
+            <strong>Марина Соль</strong>
+            <span>Маркетолог, Ferra</span>
+          </div>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="review-stars" aria-label="Оценка 4 из 5">★★★★☆</div>
+        <p>Виральная кампания принесла больше заявок, чем весь прошлый квартал вместе взятый.</p>
+        <div class="review-author">
+          <span class="avatar" aria-hidden="true"></span>
+          <div>
+            <strong>Артём Гриб</strong>
+            <span>CEO, Nordica</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-inner">
+      <h2>Готовы начать?</h2>
+      <a href="#contact" class="btn btn-light">Связаться с нами</a>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="section-heading">
+      <h2>Свяжитесь с <span class="accent">нами</span></h2>
+      <p>Расскажите о задаче — ответим в течение рабочего дня.</p>
+    </div>
+
+    <form class="contact-form" novalidate>
+      <div class="form-field">
+        <label for="name">Имя</label>
+        <input type="text" id="name" name="name" placeholder="Как вас зовут" required>
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-field form-field-wide">
+        <label for="message">Сообщение</label>
+        <textarea id="message" name="message" rows="5" placeholder="Расскажите о проекте" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary form-submit">Отправить</button>
+    </form>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-brand">
+    <div class="logo">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span class="logo-text">BrandBuzz</span>
+    </div>
+    <p>Маркетинговое агентство, которое строит решения на данных.</p>
+    <div class="socials">
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="Instagram">i</a>
+      <a href="#" aria-label="LinkedIn">in</a>
+    </div>
+  </div>
+
+  <div class="footer-col">
+    <h4>Компания</h4>
+    <ul>
+      <li><a href="#agency">О нас</a></li>
+      <li><a href="#contact">Контакты</a></li>
+      <li><a href="#">Карьера</a></li>
+      <li><a href="#">Команда</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4>Дизайн</h4>
+    <ul>
+      <li><a href="#">UI-кит</a></li>
+      <li><a href="#">Прототипы</a></li>
+      <li><a href="#">Гайдлайны</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4>Ресурсы</h4>
+    <ul>
+      <li><a href="#reviews">Кейсы</a></li>
+      <li><a href="#">Блог</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+  </div>
+
+  <p class="footer-bottom">© 2026 BrandBuzz. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
