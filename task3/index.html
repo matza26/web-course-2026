@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todo List</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <h1>Todo List</h1>
+
+  <div class="input-row">
+    <input type="text" id="taskInput" placeholder="Введите задачу...">
+    <button id="addBtn">Добавить</button>
+  </div>
+  <p id="warning" class="warning hidden">Поле не может быть пустым</p>
+
+  <div class="counters">
+    <span id="activeCount">Осталось: 0</span>
+    <span id="completedCount">Выполнено: 0</span>
+  </div>
+
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">Все</button>
+    <button class="filter-btn" data-filter="active">Активные</button>
+    <button class="filter-btn" data-filter="completed">Завершённые</button>
+  </div>
+
+  <ul id="taskList"></ul>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
