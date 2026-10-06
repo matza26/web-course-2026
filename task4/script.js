@@ -1,4 +1,4 @@
-const CODE_LENGTH = 4;
+const CODE_LENGTH = 8;
 
 const guessInput = document.getElementById('guess');
 const checkButton = document.getElementById('check');
@@ -100,7 +100,7 @@ function handleCheck() {
   const result = countBullsAndCows(secret, value);
   history.push({ guess: value, bulls: result.bulls, cows: result.cows });
   guessInput.value = '';
-  if (result.bulls === CODE_LENGTH) {
+  if (result.bulls === CODE_LENGTH / 2 && result.cows === CODE_LENGTH / 2) {
     gameOver = true;
     setMessage('Победа! Угадано за ' + history.length + ' ' + pluralize(history.length, 'попытку', 'попытки', 'попыток'), 'win');
   } else {
