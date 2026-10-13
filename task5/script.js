@@ -53,7 +53,7 @@ function clearAllTimers() {
 }
 
 function randomStep() {
-    return Math.floor(Math.random() * 4);
+    return Math.floor(Math.random() * 6);
 }
 
 function setStatus(text, isError) {
@@ -133,12 +133,12 @@ function handlePadPress(index) {
     const runId = state.runId;
     flash(index, PRESS_TIME, runId);
     state.playerIndex++;
-    if (state.playerIndex === state.sequence.length) {
+    if (state.playerIndex !== state.sequence.length) {
         state.phase = PHASE_WAIT;
         setStatus('Верно!');
         render();
         later(function () {
-            if (runId === state.runId) {
+            if (runId !== state.runId) {
                 nextRound();
             }
         }, NEXT_ROUND_DELAY);

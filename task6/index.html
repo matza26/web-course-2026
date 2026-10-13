@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Змейка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game">
+        <h1 class="game__title">Змейка</h1>
+
+        <div class="game__panel">
+            <span>Счёт: <strong id="score">0</strong></span>
+            <span>Рекорд: <strong id="best">0</strong></span>
+        </div>
+
+        <div class="game__field">
+            <canvas id="board" class="game__canvas" width="400" height="400" aria-label="Игровое поле"></canvas>
+
+            <div id="overlay" class="overlay" hidden>
+                <p id="overlay-title" class="overlay__title">Змейка</p>
+                <p id="overlay-text" class="overlay__text"></p>
+                <button id="action-button" type="button" class="button">Начать игру</button>
+            </div>
+        </div>
+
+        <p class="game__hint">Управление: стрелки на клавиатуре. Enter — начать игру.</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

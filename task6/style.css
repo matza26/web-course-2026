@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f4f7;
+    color: #1f2933;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+}
+
+.game__title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.game__panel {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    max-width: 100%;
+    font-size: 18px;
+}
+
+.game__field {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.game__canvas {
+    display: block;
+    width: 400px;
+    height: 400px;
+
+    outline: 2px solid #1f2933;
+    background-color: #ffffff;
+}
+
+.game__hint {
+    margin: 0;
+    font-size: 14px;
+    color: #52606d;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(31, 41, 51, 0.8);
+    color: #ffffff;
+    text-align: center;
+}
+
+.overlay[hidden] {
+    display: none;
+}
+
+.overlay__title {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.overlay__text {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2f80ed;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #1c6ad6;
+}
+
+.button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
