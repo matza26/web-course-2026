@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лента постов</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__title">Лента постов</h1>
+      <input
+        id="search"
+        class="search"
+        type="search"
+        placeholder="Поиск по заголовку"
+        autocomplete="off"
+        aria-label="Поиск по заголовку"
+      >
+      <p id="counter" class="counter"></p>
+    </div>
+  </header>
+
+  <main class="main">
+    <section id="posts" class="posts" aria-live="polite"></section>
+
+    <p id="empty" class="message" hidden>Нет постов, в заголовке которых есть такая подстрока.</p>
+
+    <div id="loader" class="loader" hidden>
+      <span class="spinner" aria-hidden="true"></span>
+      <span>Загрузка…</span>
+    </div>
+
+    <div id="error" class="error" role="alert" hidden>
+      <p id="error-text" class="error__text"></p>
+      <button id="retry" class="button" type="button">Повторить</button>
+    </div>
+
+    <p id="end" class="message" hidden>Больше постов нет</p>
+
+    <div id="sentinel" class="sentinel" aria-hidden="true"></div>
+  </main>
+</body>
+</html>

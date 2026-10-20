@@ -112,13 +112,13 @@
         getNextHead() {
             const head = this.snake[0];
             return {
-                x: head.x + this.direction.x,
-                y: head.y + this.direction.y
+                x: (head.x + this.direction.x) % this.cols ,
+                y: (head.y + this.direction.y) % this.rows
             };
         }
 
         checkCollision(head, willGrow) {
-            return this.isOutOfBounds(head) || this.hitsSelf(head, willGrow);
+            return this.hitsSelf(head, willGrow);
         }
 
         isOutOfBounds(point) {
