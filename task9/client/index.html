@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zen-Money</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">Zen-Money</h1>
+    <button type="button" class="button button--outline button--small" id="theme-toggle">Тёмная тема</button>
+  </header>
+
+  <main class="container">
+    <section class="summary" aria-label="Итоги">
+      <div class="summary__item">
+        <span class="summary__label">Доходы</span>
+        <span class="summary__value" id="total-income">0.00</span>
+      </div>
+      <div class="summary__item">
+        <span class="summary__label">Расходы</span>
+        <span class="summary__value" id="total-expense">0.00</span>
+      </div>
+      <div class="summary__item">
+        <span class="summary__label">Баланс</span>
+        <span class="summary__value" id="total-balance">0.00</span>
+      </div>
+    </section>
+
+    <div class="message" id="message" role="alert" hidden></div>
+
+    <section class="panel">
+      <h2 class="panel__title" id="form-title">Новая операция</h2>
+      <form id="transaction-form" novalidate>
+        <div class="grid">
+          <label class="field">
+            <span class="field__label">Сумма</span>
+            <input class="field__control" type="number" name="amount" min="0.01" step="0.01">
+          </label>
+          <label class="field">
+            <span class="field__label">Тип</span>
+            <select class="field__control" name="type">
+              <option value="expense">Расход</option>
+              <option value="income">Доход</option>
+            </select>
+          </label>
+          <label class="field">
+            <span class="field__label">Категория</span>
+            <select class="field__control" name="category_id"></select>
+          </label>
+          <label class="field">
+            <span class="field__label">Дата</span>
+            <input class="field__control" type="date" name="date">
+          </label>
+          <label class="field field--wide">
+            <span class="field__label">Комментарий</span>
+            <input class="field__control" type="text" name="comment" maxlength="300">
+          </label>
+        </div>
+        <div class="actions">
+          <button type="submit" class="button" id="submit-button">Добавить</button>
+          <button type="button" class="button button--outline" id="cancel-edit" hidden>Отмена</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel__title">Новая категория</h2>
+      <form id="category-form" novalidate>
+        <div class="grid">
+          <label class="field">
+            <span class="field__label">Название</span>
+            <input class="field__control" type="text" name="name" maxlength="50">
+          </label>
+          <label class="field">
+            <span class="field__label">Тип</span>
+            <select class="field__control" name="type">
+              <option value="expense">Расход</option>
+              <option value="income">Доход</option>
+            </select>
+          </label>
+        </div>
+        <div class="actions">
+          <button type="submit" class="button">Создать</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel__title">Фильтры</h2>
+      <form id="filter-form" novalidate>
+        <div class="grid">
+          <label class="field">
+            <span class="field__label">Тип</span>
+            <select class="field__control" name="type">
+              <option value="">Все</option>
+              <option value="income">Доходы</option>
+              <option value="expense">Расходы</option>
+            </select>
+          </label>
+          <label class="field">
+            <span class="field__label">Категория</span>
+            <select class="field__control" name="category_id"></select>
+          </label>
+          <label class="field">
+            <span class="field__label">С даты</span>
+            <input class="field__control" type="date" name="from">
+          </label>
+          <label class="field">
+            <span class="field__label">По дату</span>
+            <input class="field__control" type="date" name="to">
+          </label>
+        </div>
+        <div class="actions">
+          <button type="submit" class="button">Применить</button>
+          <button type="button" class="button button--outline" id="reset-filters">Сбросить</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel__title">Операции</h2>
+      <p class="loading" id="loading" hidden>Загрузка…</p>
+      <p class="empty" id="empty" hidden>Операций пока нет</p>
+      <div class="table-wrapper">
+        <table class="table" id="transactions-table" hidden>
+          <thead>
+            <tr>
+              <th>Дата</th>
+              <th>Категория</th>
+              <th>Комментарий</th>
+              <th class="table__amount">Сумма</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="transactions-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
